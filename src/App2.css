@@ -1,0 +1,1354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgb(1, 8, 16);
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+p {
+    text-transform: capitalize;
+}
+
+img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.container {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    overflow: hidden;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Glow effect for the sun */
+@keyframes sunGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(255, 255, 0, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.6);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin 10s linear infinite;
+}
+
+.animate-moveClouds {
+    animation: moveClouds 15s linear infinite;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 2s ease-out;
+}
+
+.animate-sunGlow {
+    animation: sunGlow 3s infinite;
+}
+
+.grid_Two_column {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 3rem;
+}
+
+.header_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem 3rem 0rem;
+
+    .faimly {
+        font-family: cursive;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input {
+        width: 30rem;
+        height: 3rem;
+        border-radius: 3rem;
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        -ms-border-radius: 3rem;
+        -o-border-radius: 3rem;
+        background: rgba(255, 255, 255, 0.116);
+        padding: 20px;
+        color: white;
+        font-size: 2rem;
+        border: 1px solid #fff;
+    }
+
+    .button {
+        background: rgba(237, 14, 14, 0.295);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.1s ease;
+        -webkit-transition: background-color 0.1s ease;
+        -moz-transition: background-color 0.1s ease;
+        -ms-transition: background-color 0.1s ease;
+        -o-transition: background-color 0.1s ease;
+        border-radius: 3rem;
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        -ms-border-radius: 3rem;
+        -o-border-radius: 3rem;
+        font-size: 1.5rem;
+        border: 1px solid #fff;
+    }
+
+    button:hover {
+        background-color: #0057b337;
+    }
+
+
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: shine 3s infinite;
+}
+
+.card2 {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Shine effect */
+@keyframes shine {
+    0% {
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+}
+
+.card_second {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: shineing 3s infinite;
+    -webkit-animation: shineing 3s infinite;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* Shine effect */
+@keyframes shineing {
+    0% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(38, 255, 212, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(38, 255, 212, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(38, 255, 212, 0.7);
+    }
+}
+
+/* normal card  */
+.card_normal {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* =================== */
+
+/* daily forcast card */
+.daily_card_normal {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    min-width: 13rem;
+    height: 14.4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0px 6px rgba(255, 255, 255, 0.79), 0 0 5px rgba(255, 255, 255, 0.79);
+
+    .time {
+        font-size: 1.4rem;
+    }
+}
+
+/* left side  */
+
+.flex_coling {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.flexMain {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+.weather-container {
+    text-align: center;
+}
+
+.card .weather-icon {
+    width: 9rem;
+    height: 9rem;
+    animation: fadeIn 1.5s ease-in-out, bounce 2s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.884));
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Glow Effect */
+.glow {
+    animation: glowEffect 1.5s infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.589));
+    }
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card .temp {
+    font-size: 4rem;
+}
+
+.card .para {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.namecountry {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.Population,
+.dateweek {
+    font-size: 1.7rem;
+}
+
+.hr {
+    width: 100%;
+    height: 1rem;
+
+}
+
+.forecast {
+    h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .forecast-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.4rem;
+
+        .weather-icons {
+            height: 4rem;
+            width: 4rem;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.884));
+        }
+    }
+}
+
+/* right side  */
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .Weather_Info {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+.flex_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.flexquailty {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        font-size: 2rem;
+    }
+}
+
+.flexQuailty {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .flexInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        .quailty {
+            display: flex;
+            flex-direction: column;
+
+            .sixe {
+                font-size: 1.6rem;
+            }
+
+            .pm2_5 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.current-weather-disc {
+    .Sunrisehead {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .flex_sunSet {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .flexon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .icon {
+            font-size: 2rem;
+        }
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+
+        .dec {
+            font-size: 1.6rem;
+        }
+
+        .sunrise {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+.flexTemp {
+    display: flex;
+    justify-content: space-between;
+
+    .gap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1rem;
+
+        .icon {
+            font-size: 2.5rem;
+        }
+
+        .humidity {
+            font-size: 3rem;
+        }
+    }
+}
+
+.flex_col_forcast {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+
+    .forecast-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+
+    .weather-icons-daily {
+        height: 6rem;
+        width: 6rem;
+        margin: 1.3rem 0 1.3rem 2rem;
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.884));
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.daily {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.overflow {
+    height: 80vh;
+    overflow-y: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.overflow::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.footer-heading {
+    font-size: 2rem;
+    color: #60A5FA;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (width <=1290px) {
+    .forecast-list {
+        width: 68.5vw;
+        overflow-y: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .forecast-list::-webkit-scrollbar {
+        display: none;
+
+    }
+}
+
+@media (width <=1210px) {
+
+    .flex_coling {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .flexMain {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .center {
+        display: grid;
+        place-items: center;
+    }
+
+    .card .weather-icon {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .card h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card .temp {
+        font-size: 4rem;
+    }
+
+    .card .para {
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+
+    .namecountry {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .Population,
+    .dateweek {
+        font-size: 1.5rem;
+    }
+
+    .forecast {
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .forecast-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.4rem;
+        }
+    }
+
+    .flex_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .flexquailty {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 1.7rem;
+        }
+    }
+
+    .flexQuailty {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        .flexInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            .quailty {
+                display: flex;
+                flex-direction: column;
+
+                .sixe {
+                    font-size: 1.5rem;
+                }
+
+            }
+        }
+    }
+
+    .current-weather-disc {
+        .Sunrisehead {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .flex_sunSet {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .flexon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3rem;
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+
+            .dec {
+                font-size: 1.6rem;
+            }
+
+            .sunrise {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .flexTemp {
+        display: flex;
+        justify-content: space-between;
+
+        .Humid {
+            font-size: 2rem;
+        }
+
+        .gap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1rem;
+
+
+
+            .icon {
+                font-size: 2.1rem;
+            }
+
+            .humidity {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media (width<=985px) {
+    .flex_row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 1rem 2rem;
+        width: 25rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        color: white;
+        position: relative;
+        overflow: hidden;
+        animation: shine 3s infinite;
+    }
+
+    .flex_col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .Weather_Info {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+
+    .flex_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .flexquailty {
+        display: flex;
+        justify-content: space-around;
+
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    .flexQuailty {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+
+        .flexInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            .quailty {
+                display: flex;
+                flex-direction: column;
+
+                .sixe {
+                    font-size: 1.6rem;
+                }
+
+                .pm2_5 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .current-weather-disc {
+        .Sunrisehead {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .flex_sunSet {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .flexon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+
+            .dec {
+                font-size: 1.6rem;
+            }
+
+            .sunrise {
+                font-size: 2.8rem;
+            }
+        }
+    }
+
+    .flexTemp {
+        display: flex;
+        justify-content: space-around;
+
+        .gap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            .icon {
+                font-size: 2rem;
+            }
+
+            .humidity {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .card_normal {
+        width: 50vw;
+    }
+
+    .card_second {
+        width: 60vw;
+    }
+
+    .card_second {
+        width: 60vw;
+    }
+
+    .forecast-list {
+        width: 60.5vw;
+        overflow-y: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .forecast-list::-webkit-scrollbar {
+        display: none;
+
+    }
+
+}
+
+@media (width<=860px) {
+
+    .flex_coling {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .flexMain {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .center {
+        display: grid;
+        place-items: center;
+    }
+
+    .card .weather-icon {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .card h1 {
+        margin: 0;
+        font-size: 29px;
+        font-weight: bold;
+    }
+
+    .card .temp {
+        font-size: 5rem;
+    }
+
+    .card .para {
+        font-size: 1.9rem;
+        margin-top: 10px;
+    }
+
+    .namecountry {
+        margin-top: 2rem;
+        font-size: 2.4rem;
+    }
+
+    .Population,
+    .dateweek {
+        font-size: 2rem;
+    }
+
+    .forecast {
+        h2 {
+            margin: 0;
+            font-size: 29px;
+            font-weight: bold;
+        }
+
+        .forecast-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .weeking {
+            font-size: 2rem;
+        }
+
+        .week {
+            font-size: 2rem;
+        }
+    }
+
+    .card {
+        width: 85vw;
+    }
+
+    .card_normal {
+        width: 78vw;
+    }
+
+    .card_second {
+        width: 85vw;
+    }
+
+    .grid_Two_column {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-list {
+        width: 85.5vw;
+
+    }
+
+    .overflow {
+        padding: 0 0 1rem 0rem;
+        height: 100%;
+        overflow-y: hidden;
+
+    }
+
+    .header_flex .logo {
+        font-size: 3rem;
+    }
+
+}
+
+@media (width<=650px) {
+    .header_flex .input {
+        width: 20rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .form .button {
+        padding: 10px 10px;
+        font-size: 1.3rem;
+    }
+
+    .header_flex .logo {
+        font-size: 2.8rem;
+    }
+
+    .current-weather-disc .flexTemp {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (width<=500px) {
+    .header_flex {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .container {
+        padding: 0rem 1rem;
+    }
+
+    .flex_coling {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .flexMain {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .center {
+        display: grid;
+        place-items: center;
+    }
+
+    .card .weather-icon {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .card h1 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .card .temp {
+        font-size: 4rem;
+    }
+
+    .card .para {
+        font-size: 1.9rem;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .namecountry {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .Population,
+    .dateweek {
+        font-size: 1.4rem;
+    }
+
+    .forecast {
+        .day {
+            margin: 0;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .forecast-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.6rem;
+        }
+
+        .weeking {
+            font-size: 1.6rem;
+        }
+
+        .week {
+            font-size: 1.6rem;
+        }
+    }
+
+    .flex_col {
+        .Weather_Info {
+            font-size: 17px;
+        }
+    }
+
+    .flexQuailty {
+        .flexInfo {
+            gap: 1rem;
+
+            .quailty {
+                .sixe {
+                    font-size: 1.4rem;
+                }
+
+                .pm2_5 {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .current-weather-disc {
+        .Sunrisehead {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .flex_sunSet {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .flexon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+
+            .dec {
+                font-size: 1.4rem;
+            }
+
+            .sunrise {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .flexTemp {
+        display: flex;
+        justify-content: space-between;
+
+        .gap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+
+            .icon {
+                font-size: 2rem;
+            }
+
+            .humidity {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .card {
+        width: 94vw;
+    }
+
+    .card_normal {
+        width: 85vw;
+    }
+
+    .card_second {
+        width: 94vw;
+    }
+
+    .forecast-list {
+        width: 94.5vw;
+    }
+
+    .footer-heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (width<=440px) {
+    .current-weather-disc .flexTemp {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+    .flexHumid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .order {
+            order: 1;
+        }
+
+        .flexTemp .flexHumid,
+        .gap {
+            order: 0;
+            gap: 4vw;
+        }
+
+        .Humid {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .gap .icon {
+            font-size: 1.7rem;
+        }
+
+        .gap .humidity {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (width<=410px) {
+    .flexon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .daily {
+        margin-top: 3rem;
+        font-size: 19px;
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+@media (width<=396px) {
+    .form .input {
+        width: 60vw;
+        height: 3rem;
+        font-size: 1.6rem;
+
+        .button {
+            font-size: 1.2rem;
+        }
+    }
+
+    .flexQuailty .icon {
+        font-size: 2rem;
+        gap: 1rem;
+    }
+
+    .forecast .weather-icons {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .forecast-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.6rem;
+
+        .weeking,
+        .week {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .card {
+        width: 95vw;
+    }
+
+    .card_normal {
+        width: 87vw;
+    }
+
+
+    .card_second {
+        width: 95vw;
+    }
+
+    .grid_Two_column {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-list {
+        width: 87.5vw;
+
+    }
+
+    .faimly {
+        margin-bottom: 3rem;
+    }
+
+    .input {
+        margin-left: 2rem;
+    }
+
+    .forecast-list {
+        width: 95.5vw;
+        overflow-y: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .card h1 {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .footer-heading {
+        font-size: 1.2rem;
+        color: #60A5FA;
+        text-align: center;
+    }
+}
